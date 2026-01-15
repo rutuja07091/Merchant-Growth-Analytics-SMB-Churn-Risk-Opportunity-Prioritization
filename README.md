@@ -6,7 +6,7 @@ Small and mid-sized merchants can decline due to operational friction (cancellat
 
 **Which merchants are at risk of churn, why are they declining, and what actions should we take next?**
 
-✅ Output: Merchant segmentation + Opportunity Score ranking + Tableau dashboards + prioritized action list.
+_Output:_ Merchant segmentation + Opportunity Score ranking + Tableau dashboards + prioritized action list.
 
 
 **Problem Statement**
@@ -19,13 +19,21 @@ Merchant performance drops often go unnoticed until the revenue impact becomes s
 The dataset contains merchant performance across **cities and categories**, focused on growth, reliability, and efficiency.
 
 **Core Metrics Used**
+
 	•	**Revenue**: total merchant revenue (impact sizing)
+    
 	•	**Orders**: completed orders
+    
 	•	**Orders Growth 4W (%)**: 4-week order trend (negative = churn signal)
+    
 	•	**Cancel Rate (%)**: reliability risk (high cancellations reduce conversion)
+    
 	•	**Refund %**: quality risk (high refunds indicate fulfillment issues)
+    
 	•	**Avg Prep Time (mins)**: operational friction (impacts cancellations + CX)
+    
 	•	**Rating**: customer satisfaction signal
+    
 	•	**ROAS**: ad efficiency (low ROAS = inefficient spend)
 
 
@@ -33,24 +41,33 @@ The dataset contains merchant performance across **cities and categories**, focu
 
 Merchants are grouped into actionable segments for Ops and Sales prioritization.
 
-Segment Definitions
+**Segment Definitions**
+
 	•	**At Risk**: negative growth + high cancels/refunds/prep issues → immediate recovery plan
+	
 	•	**Ops Constrained**: demand exists, but ops bottlenecks limit growth → fix fulfillment first
+	
 	•	**Ad Inefficient**: low ROAS + weak growth → reset campaigns before scaling spend
+	
 	•	**High Potential**: healthy fundamentals + room to scale → upsell and growth programs
+	
 	•	**Core**: stable merchants → monitor + light experimentation
 
 
 **Opportunity Score (Prioritization Model)**
 
 To avoid treating every merchant equally, merchants are ranked using an **Opportunity Score** based on:
+
 	1.	**Revenue impact**
+	
 	2.	**Growth headroom**
+	
 	3.	**Fixability of issues**
 
 **Formula** - **Opportunity Score = Revenue Weight × (0.6 × Headroom + 0.4 × Fixability)**
 
 **Definitions**
+
 	•	**Revenue Weight**: higher-revenue merchants receive higher priority
 	•	**Headroom**: recoverable decline potential
 	     •	IF Orders Growth 4W < 0 THEN ABS(Orders Growth 4W) ELSE 0
