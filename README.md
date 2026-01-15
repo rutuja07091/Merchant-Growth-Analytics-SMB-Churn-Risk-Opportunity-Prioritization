@@ -1,4 +1,4 @@
-# Merchant Growth Analytics: SMB Churn Risk + Opportunity Prioritization
+# Merchant Growth Analytics
 
 ## Executive Summary
 Small and mid-sized merchants can decline due to operational friction (cancellations, refunds, slow prep time) or inefficient marketing spend. This project builds a **portfolio-level merchant health system** to answer:
